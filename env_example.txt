@@ -1,0 +1,29 @@
+# API 密钥配置示例
+# 复制此文件为 .env 并填入你的实际 API 密钥
+
+# === 国外 API (需要稳定网络连接) ===
+# OpenAI API 密钥
+OPENAI_API_KEY=sk-your-openai-api-key-here
+
+# === 国内 API (推荐，网络连接更稳定) ===
+
+# 智谱AI (推荐) - 免费额度大，性能好
+# 注册地址: https://open.bigmodel.cn/
+ZHIPU_API_KEY=your-zhipu-api-key-here
+
+# DeepSeek - 便宜，性能优秀
+# 注册地址: https://platform.deepseek.com/
+DEEPSEEK_API_KEY=sk-your-deepseek-api-key-here
+
+# 硅基流动 - 免费使用开源模型
+# 注册地址: https://siliconflow.cn/
+SILICONFLOW_API_KEY=sk-your-siliconflow-api-key-here
+
+# 月之暗面 (Kimi) - 长上下文
+# 注册地址: https://platform.moonshot.cn/
+MOONSHOT_API_KEY=sk-your-moonshot-api-key-here
+
+# === 搜索 API ===
+# Tavily 搜索 API
+# 注册地址: https://tavily.com/
+TAVILY_API_KEY=tvly-your-tavily-api-key-here
