@@ -95,7 +95,7 @@ async def main():
         print("🤖 正在处理您的查询，请稍候...")
         response = await web_agent.run(query)
         
-        print("📊 搜索结果:")
+        print("📊 搜索结果:",response)
         for result in response.data.results:
             print(f"标题: {result.title}")
             print(f"链接: {result.url}")
