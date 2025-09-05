@@ -15,7 +15,7 @@
 ```
 ai-search-agent/
 ├── main.py          # 主程序入口
-├── models.py        # Pydantic 数据模型定义
+├── schema.py        # Pydantic 数据模型定义
 ├── search.py        # 搜索功能实现
 ├── requirements.txt # 项目依赖
 ├── .env            # 环境变量配置（需要创建）
@@ -97,7 +97,7 @@ model = OpenAIChatModel('your-model-name', provider=OpenAIProvider(
 
 ## 📋 核心组件
 
-### 1. 数据模型 (models.py)
+### 1. 数据模型 (schema.py)
 
 定义了搜索结果的数据结构：
 
