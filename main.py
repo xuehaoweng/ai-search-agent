@@ -35,14 +35,28 @@ async def main():
         response = await web_agent.run(query)
         
         print("📊 搜索结果:")
-        for result in response.data.results:
-            print(f"标题: {result.title}")
-            print(f"链接: {result.url}")
-            print(f"摘要: {result.snippet}")
-            print("---")
+        # 检查 response 的实际结构
+        if hasattr(response, 'data'):
+            search_results = response.data
+        elif hasattr(response, 'output'):
+            search_results = response.output
+        else:
+            search_results = response
         
+        # 打印搜索结果
+        if hasattr(search_results, 'results'):
+            for result in search_results.results:
+                print(f"标题: {result.title}")
+                print(f"链接: {result.url}")
+                print(f"摘要: {result.snippet}")
+                print("---")
+        
+        # 打印 AI 分析
         print("\n📝 AI 分析:")
-        print(response.data.main_content)
+        if hasattr(search_results, 'main_content'):
+            print(search_results.main_content)
+        else:
+            print("未找到主要内容分析")
         
     except Exception as e:
         print(f"❌ 发生错误: {type(e).__name__}")
